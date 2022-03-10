@@ -37,6 +37,8 @@ In this step, we are going to dive into the functionality of the application. If
 
 - Render the ```TopicBrowser``` component in the ```return``` method of ```App```.
 
+<img src="./assets/2-2.png" align="center"/>
+
 ## Step 2
 **Summary**
 In this step, we’ll render all of our topics from the ```Topics``` folder, create the basic outlines for each of the topics ( the same exact way we did ```TopicBrowser``` ) with the only difference being the ```<p>``` element saying what the component name is, and then import and render those topic components into our ```TopicBrowser``` component.
@@ -103,6 +105,8 @@ In this step, we’ll start with the first topic: ```EvenAndOdd```.
 
 - Assign the other ```<span>``` element to display the value of ```oddArray```.
 
+<img src="./assets/1g.gif" align="center" />
+
 ## Step 4
 **Summary**
 In this step, we’ll build out the ```FilterObject``` component.
@@ -151,6 +155,8 @@ In this step, we’ll build out the ```FilterObject``` component.
 - Assign the first span element the value of ```unFilteredArray```.
 
 - Assign the last span element the value of ```filteredArray```.
+
+<img src="./assets/2g.gif" align="center"/>
 
 ## Step 5
 **Summary**
@@ -201,6 +207,8 @@ Remove the ```<p>``` element from the return method.
 
 - Assign the last ```<span>``` element the value of ```filteredArray```
 
+<img src="./assets/3g.gif" align="center"/>
+
 ## Step 6
 **Summary**
 In this step, we’ll build out the ```Palindrome``` component. A Palindrome is a word that reads the same backwards as it does forwards. *ex: "Bob", "Hannah", "Racecar".*
@@ -243,6 +251,8 @@ In this step, we’ll build out the ```Palindrome``` component. A Palindrome is 
   - This function/method should update the value of ```palindrome```.
 
 - Assign the ```<span>``` element the value of ```palindrome```.
+
+<img src="./assets/4g.gif" align="center"/>
 
 ## Step 7
 **Summary**
@@ -290,6 +300,8 @@ In this step, we’ll build out the ```Sum``` component.
   - This function/method should update the value of ```sum```.
 
 - Assign the ```<span>``` element the value of ```sum```.
+
+<img src="./assets/5g.gif" align="center"/>
 
 **Going Further**
 To take this project a step further try to add more toy problems to the project throughout your time at DevMountain. This is completely optional, however this project has the potential to be a showcase of your knowledge to solve CS problems.
