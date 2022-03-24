@@ -39,6 +39,91 @@ In this step, we are going to dive into the functionality of the application. If
 
 <img src="./assets/2-2.png" align="center"/>
 
+**Class Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+  import TopicBrowser from './components/TopicBrowser/TopicBrowser.js'
+
+  class App extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <TopicBrowser />
+      )
+    }
+  }
+
+  export default App
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+
+  class TopicBrowser extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <p>Hello World</p>
+      )
+    }
+  }
+
+  export default TopicBrowser
+  ```
+
+</details>
+
+**Functional Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  import React from 'react'
+  import TopicBrowser from './components/TopicBrowser/TopicBrowser.js'
+  function App() {
+
+    return (
+      <TopicBrowser>
+    )
+  }
+
+  export default App
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  import React from 'react'
+
+  function TopicBrowser() {
+
+    return (
+      <p>Hello World</p>
+    )
+  }
+
+  export default TopicBrowser
+  ```
+
+</details>
+
 ## Step 2
 **Summary**
 In this step, we’ll render all of our topics from the ```Topics``` folder, create the basic outlines for each of the topics ( the same exact way we did ```TopicBrowser``` ) with the only difference being the ```<p>``` element saying what the component name is, and then import and render those topic components into our ```TopicBrowser``` component.
@@ -55,6 +140,267 @@ In this step, we’ll render all of our topics from the ```Topics``` folder, cre
 - Import all the topic files from ```src/components/Topics into src/components/TopicBrowser/TopicBrowser.js```.
 
 - Render a parent ```<div>``` element containing all of the ```Topic``` components.
+
+**Class Component Solution**
+
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+  import EvenAndOdd from '../Topics/EvenAndOdd'
+import FilterObject from '../Topics/FilterObject'
+import FilterString from '../Topics/FilterString'
+import Palindrome from '../Topics/Palindrome'
+import Sum from '../Topics/Sum'
+
+  class TopicBrowser extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <div>
+          <EvenAndOdd />
+          <FilterObject />
+          <FilterString />
+          <Palindrome />
+          <Sum />
+        </div>
+      )
+    }
+  }
+
+  export default TopicBrowser
+  ```
+</details>
+<details>
+  <summary><code>src/components/Topics/EvenAndOdd.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+
+  class EvenAndOdd extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <p>EvenAndOdd</p>
+      )
+    }
+  }
+
+  export default EvenAndOdd
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/FilterObject.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+
+  class FilterObject extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <p>FilterObject</p>
+      )
+    }
+  }
+
+  export default FilterObject
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/FilterString.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+
+  class FilterString extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <p>FilterString</p>
+      )
+    }
+  }
+
+  export default FilterString
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/Palindrome.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+
+  class Palindrome extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <p>Palindrome</p>
+      )
+    }
+  }
+
+  export default Palindrome
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/Sum.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+
+  class Sum extends Component {
+    constructor() {
+      super()
+    }
+
+    render() {
+      return (
+        <p>Sum</p>
+      )
+    }
+  }
+
+  export default Sum
+  ```
+
+</details>
+
+**Functional Component Solution**
+
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  import React from 'react'
+  import EvenAndOdd from '../Topics/EvenAndOdd'
+  import FilterObject from '../Topics/FilterObject'
+  import FilterString from '../Topics/FilterString'
+  import Palindrome from '../Topics/Palindrome'
+  import Sum from '../Topics/Sum'
+
+
+  function TopicBrowser() {
+
+    return (
+      <div>
+        <EvenAndOdd />
+        <FilterObject />
+        <FilterString />
+        <Palindrome />
+        <Sum />
+      </div>
+    )
+  }
+
+  export default TopicBrowser
+  ```
+</details>
+<details>
+  <summary><code>src/components/Topics/EvenAndOdd.js</code></summary>
+
+  ```js
+  import React from 'react'
+
+  function EvenAndOdd() {
+
+    return (
+      <p>EvenAndOdd</p>
+    )
+  }
+
+  export default EvenAndOdd
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/FilterObject.js</code></summary>
+
+  ```js
+  import React from 'react'
+
+  function FilterObject() {
+
+    return (
+      <p>FilterObject</p>
+    )
+  }
+
+  export default FilterObject
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/FilterString.js</code></summary>
+
+  ```js
+  import React from 'react'
+
+  function FilterString() {
+
+    return (
+      <p>FilterString</p>
+    )
+  }
+
+  export default FilterString
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/Palindrome.js</code></summary>
+
+  ```js
+  import React from 'react'
+
+  function Palindrome() {
+
+    return (
+      <p>Palindrome</p>
+    )
+  }
+
+  export default Palindrome
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/Topics/Sum.js</code></summary>
+
+  ```js
+  import React from 'react'
+
+  function Sum() {
+
+    return (
+      <p>Sum</p>
+    )
+  }
+
+  export default Sum
+  ```
+
+</details>
 
 ## Step 3
 **Summary**
@@ -107,6 +453,97 @@ In this step, we’ll start with the first topic: ```EvenAndOdd```.
 
 <img src="./assets/1g.gif" align="center" />
 
+**Class Component Solution**
+
+<details>
+  <summary><code>src/components/TopicBrowser/EvenAndOdd.js</code></summary>
+
+  ```js
+  import React, {Component} from 'react'
+
+  class EvenAndOdd extends Component {
+    constructor() {
+      super()
+
+      this.state = {
+        evenArray: [],
+        oddArray: [],
+        userInput: ""
+      }
+    }
+
+    clickHandler() {
+      let str = this.state.userInput;
+      str = str.split(",");
+
+      const evens = str.filter((number) => number % 2 === 0).map(Number)
+      const odds = str.filter((number) => number % 2 !== 0).map(Number)
+
+      this.setState({
+        evenArray: [...this.state.evenArray, ...evens],
+        oddArray: [...this.state.oddArray, ...odds],
+        userInput: ""
+      })
+    }
+
+    render() {
+      return (
+        <div>
+          <h4>Evens and Odds</h4>
+          <input type="text" onChange={(e) => this.setState({userInput: e.target.value})}>
+          <button onClick={clickHandler}>Split</button>
+          <span>Evens: {JSON.stringify(this.state.evensArray)}</span>
+          <span>Odds: {JSON.stringify(this.state.oddsArray)}</span>
+        </div>
+      )
+    }
+  }
+
+  export default EvenAndOdd
+  ```
+
+</details>
+
+**Functional Component Solution**
+
+<details>
+  <summary><code>src/components/TopicBrowser/EvenAndOdd.js</code></summary>
+
+  ```js
+  import React, {useState} from 'react'
+
+  function EvenAndOdd() {
+    const [evensArray, setEvensArray] = useState([])
+    const [oddsArray, setOddsArray] = useState([])
+    const [userInput, setUserInput] = useState("")
+
+    const clickHandler = () => {
+      let str = userInput.split(",")
+      for(let num of str) {
+        if(num % 2 === 0) {
+          setEvensArray([...evensArray, num])
+        } else {
+          setOddsArray([...odsArray, num])
+        }
+      }
+    }
+
+    return (
+      <div>
+        <h4>Evens and Odds</h4>
+        <input onChange={(e) => setUserInput(e.target.value)}>
+        <button onClick={clickHandler}>Split</button>
+        <span>Evens: {JSON.stringify(evensArray)}</span>
+        <span>Odds: {JSON.stringify(oddsArray)}</span>
+      </div>
+    )
+  }
+
+  export default EvenAndOdd
+  ```
+
+</details>
+
 ## Step 4
 **Summary**
 In this step, we’ll build out the ```FilterObject``` component.
@@ -157,6 +594,44 @@ In this step, we’ll build out the ```FilterObject``` component.
 - Assign the last span element the value of ```filteredArray```.
 
 <img src="./assets/2g.gif" align="center"/>
+
+**Class Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+
+**Functional Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
 
 ## Step 5
 **Summary**
@@ -254,6 +729,44 @@ In this step, we’ll build out the ```Palindrome``` component. A Palindrome is 
 
 <img src="./assets/4g.gif" align="center"/>
 
+**Class Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+
+**Functional Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+
 ## Step 7
 **Summary**
 In this step, we’ll build out the ```Sum``` component.
@@ -302,6 +815,44 @@ In this step, we’ll build out the ```Sum``` component.
 - Assign the ```<span>``` element the value of ```sum```.
 
 <img src="./assets/5g.gif" align="center"/>
+
+**Class Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+
+**Functional Component Solution**
+
+<details>
+  <summary><code>src/App.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
+<details>
+  <summary><code>src/components/TopicBrowser/TopicBrowser.js</code></summary>
+
+  ```js
+  console.log("hello World")
+  ```
+
+</details>
 
 **Going Further**
 To take this project a step further try to add more toy problems to the project throughout your time at DevMountain. This is completely optional, however this project has the potential to be a showcase of your knowledge to solve CS problems.
