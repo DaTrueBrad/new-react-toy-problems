@@ -99,7 +99,7 @@ import TopicBrowser from './components/TopicBrowser/TopicBrowser.js'
 function App() {
 
   return (
-    <TopicBrowser>
+    <TopicBrowser />
   )
 }
 
@@ -161,7 +161,7 @@ class TopicBrowser extends Component {
 
   render() {
     return (
-      <div>
+      <div className="puzzleFeed">
         <EvenAndOdd />
         <FilterObject />
         <FilterString />
@@ -292,7 +292,7 @@ import Sum from "../Topics/Sum";
 
 function TopicBrowser() {
   return (
-    <div>
+    <div className="puzzleFeed">
       <EvenAndOdd />
       <FilterObject />
       <FilterString />
