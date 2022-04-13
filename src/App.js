@@ -1,12 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import EvenAndOdd from './EvensAndOdds';
+
 
 function App() {
   return (
-    <div className="App">
-      <EvenAndOdd />
-    </div>
+    <div>Replace this whole div!</div>
   );
 }
 
